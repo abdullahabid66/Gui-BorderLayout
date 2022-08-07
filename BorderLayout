@@ -1,0 +1,30 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class Gui
+{
+	public static void main(String args[])
+	{
+		JFrame frame = new JFrame();
+		Container con = frame.getContentPane();
+		BorderLayout brd=new BorderLayout(5,4);
+		con.setLayout(brd);
+		String[] strDirection={"North","South", "East","West","Center"};
+		JButton [] btn=new JButton[5];
+	
+		for(int i=0;i<btn.length;i++)
+		{
+			btn[i] =new JButton(strDirection[i]);
+			con.add(btn[i],strDirection[i]);
+		}
+		
+		
+		
+		
+		
+		frame.setSize(300,350);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(3);
+	}
+
+}
